@@ -52,7 +52,7 @@ class ServiceInfo {
   private final String key;
   private boolean valid = true;
 
-  private static final Logger log = LoggerFactory.getLogger(ContextAwareServiceTracker.class);
+  private static final Logger log = LoggerFactory.getLogger(ServiceInfo.class);
 
   ServiceInfo(ServiceReference<?> serviceReference, BundleContext bundleContext) {
     this.service = validateAndGetService(serviceReference, bundleContext);

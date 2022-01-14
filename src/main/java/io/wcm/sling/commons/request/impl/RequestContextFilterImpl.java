@@ -46,7 +46,7 @@ public final class RequestContextFilterImpl implements RequestContext, Filter {
   private static final ThreadLocal<Stack<SlingHttpServletRequest>> REQUEST_THREADLOCAL = new ThreadLocal<Stack<SlingHttpServletRequest>>() {
     @Override
     protected Stack<SlingHttpServletRequest> initialValue() {
-      return new Stack<SlingHttpServletRequest>();
+      return new Stack<>();
     }
   };
 
