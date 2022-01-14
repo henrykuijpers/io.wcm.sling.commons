@@ -78,6 +78,7 @@ public final class RankedServices<T> implements Iterable<T> {
    * @param service Service instance
    * @param props Service reference properties
    */
+  @SuppressWarnings("java:S1172")
   public void unbind(T service, Map<String, Object> props) {
     synchronized (serviceMap) {
       serviceMap.remove(ServiceUtil.getComparableForServiceRanking(props));

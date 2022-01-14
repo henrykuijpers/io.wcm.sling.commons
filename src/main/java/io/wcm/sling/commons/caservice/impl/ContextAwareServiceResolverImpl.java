@@ -141,6 +141,7 @@ public class ContextAwareServiceResolverImpl implements ContextAwareServiceResol
     return null;
   }
 
+  @SuppressWarnings("java:S112") // allow generic exception
   private ContextAwareServiceTracker getServiceTracker(Class<?> serviceClass) {
     try {
       return serviceTrackerCache.get(serviceClass.getName());
